@@ -159,6 +159,10 @@ def get_balance():
 def generate_wallet():
     return str(blockchain.create_account()),200
 
+@app.route('/get_chain')
+def get_chain():
+    return str(blockchain.chain),200
+
 @app.route('/create_transaction',methods=['POST'])
 def create_transaction():
     input_json = request.get_json(force=True)

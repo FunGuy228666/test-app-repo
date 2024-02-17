@@ -204,5 +204,5 @@ if __name__ == '__main__':
 
     t = Thread(target=main_loop)
     t.start()
-    app.run()
+    app.run(host="0.0.0.0")
     t.join()
